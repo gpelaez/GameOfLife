@@ -1,0 +1,19 @@
+.game-canvas {
+    margin: 0 auto;
+    display: table;
+}
+.game-canvas .table {
+    border: solid 1px #9a9a9a
+}
+.game-canvas .game-row {
+    border: none;
+}
+.game-canvas .game-row > .game-cell {
+    padding: 5px;
+    float: left;
+    border: none;
+    border: solid 1px #e5e5e5
+}
+.game-canvas .game-row > .game-cell.alive {
+    background-color: #000;
+}

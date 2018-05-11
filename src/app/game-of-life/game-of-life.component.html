@@ -1,0 +1,25 @@
+<button (click)="loadPattern()">Load Pattern</button>
+<button (click)="togglePlay()">{{isPlaying? 'Pause' : 'Play'}}</button>
+<div class="game-canvas">
+  <div class="table-responsive">
+    <table class="table">
+      <tbody>
+        <tr class="game-row" *ngFor="let row of matrix; let i = index">
+          <td (click)="toggleDeath(i,j)" class="game-cell  y-{{i + 1}} x-{{j + 1}}" *ngFor="let cell of row; let j = index" [ngClass]="{'alive': cell}">
+            <span class="sr-only">{{cell==0? 'death':'alive'}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="game-matrix">
+  <div *ngFor="let row of matrix; let i = index">
+    <h4>Row number {{ i + 1 }}</h4>
+    <ul>
+      <li *ngFor="let cell of row; let j = index">
+        <b>Matrix[{{i}}][{{j}}] = </b><i>{{ cell===0? 'Death' : 'Alive' }}</i>
+      </li>
+    </ul>
+  </div>
+</div>

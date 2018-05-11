@@ -1,0 +1,26 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<div class="jumbotron">
+    <h1 class="display-4">{{title}}</h1>
+    <p class="lead">AngularJS 4 implementation of Conway's Game of Life; a game based on a matrix of cells that could be death or alive. The status of the conway's game of life's cells deppends on the status of the neighbours cells.</p>
+    <hr class="my-4">
+    <p>
+        The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
+    </p>
+    <p>
+      Use the mouse pointer to toggle the game cells status.
+    </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" role="button">Learn more</a>
+    </p>
+  </div>
+
+
+<app-game-of-life #game [width]="50"  [height]="50"></app-game-of-life>
+
+
